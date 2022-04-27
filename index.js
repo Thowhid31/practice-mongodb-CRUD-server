@@ -18,9 +18,10 @@ async function run(){
     try{
         await client.connect();
         const userCollection = client.db("express").collection('user');
-        const user = {name: 'Maha Moha 2', email: 'janina2@gmail.com'}
-        const result = await userCollection.insertOne(user)
-        console.log(`user inserted with id: ${result.insertedId}`);
+        
+        app.post('/user', (req, res)=>{
+            
+        })
     }
     finally{
         await client.close();
