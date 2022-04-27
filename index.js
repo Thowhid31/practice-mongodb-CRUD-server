@@ -47,7 +47,7 @@ async function run(){
                 const id = req.params.id;
                 const updatedUser = req.body;
                 const filter = {_id: ObjectId(id)};
-                const options = { upsert: true };
+                const options = { insert: true };
                 const updatedDoc = {
                     $set: {
                         name: updatedUser.name,
